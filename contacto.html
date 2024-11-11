@@ -1,0 +1,160 @@
+<!-- !DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../contacto/contacto.css">
+    <script src="https://kit.fontawesome.com/29c3be7601.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+            <nav id="nav">
+                <ul id="ul">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="#sobremi">SOBREMI</a></li>
+                    <li><a href="../servicios/servicios.html">SERVICIOS</a></li>
+                    <li><a href="../curriculum/curriculum.html">CURRICULUM</a></li>
+                    <li><a href="../contacto/contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+     </div>
+    <main id="main" class="main">
+            <h1 class="contactame">¡CONTACTAME!</h1>
+            <div class="formulario">
+                <form action="/enviar-formulario" method="post">
+                <div class="form-group1">
+                    <p class="name"><label for="nombre">Nombre:</label></p>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group1">
+                    <p class="correo"><label for="email">Correo Electrónico:</label></p>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group1">
+                    <p class="telefono"><label for="telefono">Teléfono:</label></p>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <div class="form-group1">
+                    <p class="mensaje"><label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <div class="form-group5">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <main class="main-content">
+        <h2 class="section-title-principal">¡Contactame!</h2>
+        <form class="form-container">
+            <!-- <div class="row">
+                <div class="col text-container">
+                    <p class="text">Envíame un mensaje</p>
+                </div>
+            </div> -->
+            <!--<div class="form-row">
+                <div class="form-col">
+                    <label for="name">NOMBRE</label>
+                    <input type="text" id="name" class="form-control" placeholder="Por favor, ingresa tu nombre.">
+                </div>
+                <div class="form-col">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" class="form-control" placeholder="Por favor, ingresa tu email.">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">MENSAJE</label>
+                <textarea id="message" class="form-control" placeholder="Por favor, escribe un mensaje." rows="10"></textarea>
+            </div>
+            <button type="submit" class="submit-button">ENVIAR <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </main>
+     <div class="redes">
+         <!-- <h2 class="mediosdecontacto">Medios de contacto</h2> -->
+             <!--ul id="app" class="app">
+                <button id="linkedin"><li><a href="https://www.linkedin.com/in/micaela-sol-pasman-609771269/"><i class="fa-brands fa-linkedin fa-4x"></i></a></li></button>
+                <button id="wpp"><li><a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp fa-4x"></i></a></li></button>
+                <button id="skype"><li><a href="https://www.skype.com/es/"><i class="fa-brands fa-skype fa-4x"></i></a></li></button>
+                <button id="telegram"><li><a href="https://web.telegram.org/k/"><i class="fa-brands fa-telegram fa-4x"></i></a></li></button>
+             </ul>
+     </div>
+    <footer>
+        <p class="derechos">Derechos Reservados <i class="fa-regular fa-copyright"></i></p>
+    </footer> 
+</body>
+</html -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="../contacto/contacto.css">
+    <script src="https://kit.fontawesome.com/29c3be7601.js" crossorigin="anonymous"></script>
+    <script src="../contacto/contacto.js"></script>
+</head>
+<body>
+    <button id="toggle-mode" onclick="toggleMode()">
+        <span class="icon"><i class="fas fa-sun"></i></span><br>
+        Cambiar Modo
+    </button>
+    
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+            <nav id="nav">
+                <ul id="ul">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="../sobremi/sobremi.html">SOBREMI</a></li>
+                    <li><a href="../servicios/servicios.html">SERVICIOS</a></li>
+                    <li><a href="../curriculum/curriculum.html">CURRICULUM</a></li>
+                    <li><a href="../contacto/contacto.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </header>
+     </div>
+     <h1 class="contactame">¡CONTACTAME!</h1>
+    <div class="contact-form-container">
+        <h2 class="formulario">Formulario de contacto</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name" class="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email" class="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message" class="mensaje">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button id="send-button">
+                <span class="icon"><i class="fas fa-paper-plane"></i></span><br>
+                Enviar
+            </button>            
+        </form>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+    <h1 class="mediosdecontacto">Medios de contacto</h1>
+         <ul id="app" class="app">
+             <button id="linkedin"><li><a href="https://www.linkedin.com/in/micaela-sol-pasman-609771269/"><i class="fa-brands fa-linkedin fa-4x"></i></a></li></button>
+             <button id="wpp"><li><a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp fa-4x"></i></a></li></button>
+             <button id="skype"><li><a href="https://www.skype.com/es/"><i class="fa-brands fa-skype fa-4x"></i></a></li></button>
+             <button id="telegram"><li><a href="https://web.telegram.org/k/"><i class="fa-brands fa-telegram fa-4x"></i></a></li></button>
+         </ul>
+<footer class="footer">
+<p class="derechos">Derechos Reservados <i class="fa-regular fa-copyright"></i></p>
+</footer> 
+</body>
+</html>
+
+
